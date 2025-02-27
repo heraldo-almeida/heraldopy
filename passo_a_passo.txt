@@ -1,0 +1,72 @@
+Step 1: Update the Version Number
+    Before uploading, increment the version in both setup.py and setup.cfg.
+    a) Modify setup.py
+        Change the version (e.g., from 1.0.1 to 1.0.2):
+            setup(
+                name="heraldopy",
+                version="1.0.2",  # 🔥 Update this version >>>>> AQUI
+                author="Heraldo Almeida",
+                author_email="heraldo.almeida@gmail.com",
+                description="A set of automation tools",
+                long_description=open("README.md").read(),
+                long_description_content_type="text/markdown",
+                url="https://github.com/yourusername/heraldopy",
+                packages=find_packages(),
+                install_requires=[
+                    "requests",
+                    "msal",
+                    "wget",
+                    "numpy",
+                    "pandas",
+                    "tk",
+                ],
+                license="MIT",
+                classifiers=[
+                    "Programming Language :: Python :: 3",
+                    "License :: OSI Approved :: MIT License",
+                    "Operating System :: OS Independent",
+                ],
+                python_requires=">=3.6",
+            )
+
+    b) Modify setup.cfg (if applicable)
+            [metadata]
+            name = heraldopy
+            version = 1.0.2  # 🔥 Update this version >>>>>>> E AQUI
+            description = A set of automation tools
+            author = Heraldo Almeida
+            author_email = heraldo.almeida@gmail.com
+            license = MIT
+            url = https://github.com/yourusername/heraldopy
+            classifiers =
+                Programming Language :: Python :: 3
+                License :: OSI Approved :: MIT License
+                Operating System :: OS Independent
+
+
+Step 2: Remove Old Build Files
+
+    Colocar no console:
+        Remove-Item -Recurse -Force dist, build, heraldopy.egg-info
+
+
+Step 3: Build the New Package
+    Colocar no console:
+        python setup.py sdist bdist_wheel
+
+Step 4: Verify the Package
+    Colocar no console:
+        twine check dist/*
+
+
+Step 5: Upload the New Version to PyPI
+    Colocar no console:
+        twine upload dist/*
+OBS: Checar versão em https://pypi.org/project/heraldopy/
+
+Step 6: Update heraldopy in Your Project
+    Colocar no console:
+        pip install --upgrade heraldopy
+
+Step 7: Atualizar no git hub...
+    Em construção
