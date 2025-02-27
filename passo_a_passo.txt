@@ -69,4 +69,20 @@ Step 6: Update heraldopy in Your Project
         pip install --upgrade heraldopy
 
 Step 7: Atualizar no git hub...
-    Em construção
+    Check the Status of Your Repository
+    Before committing, check which files have changed:
+    Colocar no console:
+        git status
+
+Step 8: Add the Updated Files to Git
+    To stage all modified files for commit, run:
+    Colocar no console:
+        git add .
+
+Step 8: Commit the Changes
+    Now, commit the changes with a message describing what you updated:
+        git commit -m "Updated functions and optimized heraldopy"
+
+Step 9: Push the Changes to GitHub
+    Upload your latest changes to GitHub
+        git push origin main
