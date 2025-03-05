@@ -107,5 +107,5 @@ def atualiza_chromedriver():
         # Delete the ZIP file after extraction
         os.remove(destination_zip)
         print(
-            f"\nChromedriver atualizado com sucesso para a versão {latest_version}.\n"
+            f'\nChromedriver atualizado com sucesso para a versão {latest_version}.\nCertifique-se de que a versão do Google Chrome é a mais atual para evitar problema do tipo "SessionNotCreatedException".'
         )
