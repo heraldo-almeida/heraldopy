@@ -156,3 +156,16 @@ def list_and_download_files(
             print(result.get("claims", "No claims available."))
     else:
         print(f"Failed to list files: {response.json()}")
+
+def imprime_iframe(driver):
+    iframe_id = driver.execute_script("return window.frameElement ? window.frameElement.id : '';")
+    iframe_name = driver.execute_script("return window.frameElement ? window.frameElement.name : '';")
+    
+    faz_log(f"ID do iframe atual: {iframe_id}")
+    faz_log(f"Nome do iframe atual: {iframe_name}")
+    return
+
+def retorna_id_iframe_para_variavel(driver):
+    iframe_id = driver.execute_script("return window.frameElement ? window.frameElement.id : '';")
+
+    return iframe_id

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages  # 🔥 Import find_packages()
 
 setup(
     name="heraldopy",
-    version="1.0.7",  # Update version when making changes
+    version="1.0.8",  # Update version when making changes
     author="Heraldo Almeida",
     author_email="heraldo.almeida@gmail.com",
     description="A set of automation tools",
