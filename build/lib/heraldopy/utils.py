@@ -169,3 +169,19 @@ def retorna_id_iframe_para_variavel(driver):
     iframe_id = driver.execute_script("return window.frameElement ? window.frameElement.id : '';")
 
     return iframe_id
+
+def pega_primeiro_arquivo_da_pasta(caminho):
+    '''
+    Retorna um padas dataframe com todas as colunas em formato string 
+    para o primeiro arquivo da pasta que contém o caminho informado.
+    
+    Variáveis:
+    caminho(string): Caminho relativo ao main branch da pasta que contém os arquivos.
+    '''
+    
+    df = pd.read_excel(
+            arquivos_com_caminho_absoluto_do_arquivo(caminho)[0],
+            dtype=str,
+        )
+    
+    return df

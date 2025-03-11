@@ -62,6 +62,8 @@ Step 4: Verify the Package
 Step 5: Upload the New Version to PyPI
     Colocar no console:
         twine upload dist/*
+
+        
 OBS: Checar versão em https://pypi.org/project/heraldopy/
 
 Step 6: Update heraldopy in Your Project
